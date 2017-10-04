@@ -1,0 +1,114 @@
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Go to today"
+msgstr "Gehe zu Heute"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Clear selection"
+msgstr "Selektion löschen"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Close the picker"
+msgstr "Schliessen"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Select Month"
+msgstr "Monat wählen"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Previous Month"
+msgstr "Vorheriger Monat"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Next Month"
+msgstr "Nächster Monat"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Select Year"
+msgstr "Jahr wählen"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Previous Year"
+msgstr "Vorheriges Jahr"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Next Year"
+msgstr "Nächstes Jahr"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Select Decade"
+msgstr "Jahrzehnt wählen"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Previous Decade"
+msgstr "Vorheriges Jahrzehnt"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Next Decade"
+msgstr "Nächstes Jahrzehnt"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Previous Century"
+msgstr "Vorheriges Jahrhundert"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Next Century"
+msgstr "Nächstes Jahrhundert"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Increment Hour"
+msgstr "+1 Stunde"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Pick Hour"
+msgstr "Stunde wählen"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Decrement Hour"
+msgstr "-1 Stunde"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Increment Minute"
+msgstr "+1 Minute"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Pick Minute"
+msgstr "Minute wählen"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Decrement Minute"
+msgstr "-1 Minute"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Increment Second"
+msgstr "+1 Sekunde"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Pick Second"
+msgstr "Sekunde wählen"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Decrement Second"
+msgstr "-1 Sekunde"

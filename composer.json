@@ -1,0 +1,43 @@
+{
+	"name": "simialbi/yii2-widget-datepicker",
+	"description": "HQ Reservation tool Yii framework",
+	"keywords": [
+		"yii2",
+		"yii2-widgets",
+		"datepicker",
+		"datetimepicker"
+	],
+	"type": "yii2-extension",
+	"license": "MIT",
+	"support": {
+		"issues": "https://github.com/simialbi/yii2-widget-datetimepicker/issues",
+		"source": "https://github.com/simialbi/yii2-widget-datetimepicker"
+	},
+	"authors": [
+		{
+			"name": "Simon Karlen",
+			"email": "simi.albi@gmail.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require": {
+		"yiisoft/yii2": ">=2.0.5",
+		"yiisoft/yii2-bootstrap": ">=2.0.5",
+		"bower-asset/eonasdan-bootstrap-datetimepicker": ">=4.17.47"
+	},
+	"config": {
+		"process-timeout": 1800,
+		"fxp-asset": {
+			"installer-paths": {
+				"npm-asset-library": "vendor/npm",
+				"bower-asset-library": "vendor/bower"
+			}
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"simialbi\\yii2\\date\\": ""
+		}
+	}
+}
