@@ -16,7 +16,7 @@ use yii\web\AssetBundle;
  *
  * @author Simon Karlen <simi.albi@gmail.com>
  */
-class DatepickerAsset extends AssetBundle {
+class DatetimepickerAsset extends AssetBundle {
 	/**
 	 * @var string the directory that contains the source asset files for this asset bundle.
 	 */

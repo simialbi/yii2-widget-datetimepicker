@@ -54,7 +54,7 @@ use Yii;
  * @see http://eonasdan.github.io/bootstrap-datetimepicker/
  * @author Simon Karlen <simi.albi@gmail.com>
  */
-class Datepicker extends InputWidget {
+class Datetimepicker extends InputWidget {
 	/**
 	 * The markup to render the calendar icon in the date picker button.
 	 */
@@ -232,7 +232,7 @@ class Datepicker extends InputWidget {
 		$id   = $this->options['id'];
 		$view = $this->getView();
 
-		DatepickerAsset::register($view);
+		DatetimepickerAsset::register($view);
 
 		$js = [
 			"var dp$id = jQuery('#$id');",

@@ -33,7 +33,7 @@ To include datepicker instance in one of your pages, call the widget like this:
 /* @var $model yii\base\Model */
 
 use yii\widgets\ActiveForm;
-use simialbi\yii2\date\Datepicker;
+use simialbi\yii2\date\Datetimepicker;
 
 $this->title = 'myForm';
 $this->params['breadcrumbs'][] = $this->title;
@@ -42,9 +42,9 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="my-form">
 	<?php $form = ActiveForm::begin(['id' => 'my-form']); ?>
 		<?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
-		<?= $form->field($model, 'birthday')->widget(Datepicker::className(), [
+		<?= $form->field($model, 'birthday')->widget(Datetimepicker::className(), [
 				'format' => 'mm/dd/yyyy',
-				'type'   => Datepicker::TYPE_COMPONENT_APPEND
+				'type'   => Datetimepicker::TYPE_COMPONENT_APPEND
 			]) ?>
 		<?= $form->field($model, 'email') ?>
 	<?php ActiveForm::end(); ?>
