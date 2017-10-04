@@ -1,5 +1,6 @@
 # yii2-widget-datetimepicker
-This extension provides a `date`, `time` or `datetime` picker widget for yii2 framework in bootstrap style.
+This extension provides a `date`, `time` or `datetime` picker widget for yii2 framework in bootstrap style. It's based 
+on [Bootstrap Datepicker](http://eonasdan.github.io/bootstrap-datetimepicker/) from [Eonasdan](https://github.com/Eonasdan).
  
 ## Resources
  * [yii2](https://github.com/yiisoft/yii2) framework
