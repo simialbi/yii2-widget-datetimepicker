@@ -16,6 +16,44 @@ use yii\web\View;
 use yii\widgets\InputWidget;
 use Yii;
 
+/**
+ * Datepicker renders a bootstrap styled `date`, `time` or `datetimepicker` widget.
+ *
+ * For example to use the datepicker with a [[\yii\base\Model|model]]:
+ *
+ * ```php
+ * echo Datepicker::widget([
+ *     'model' => $model,
+ *     'attribute' => 'from_date',
+ *     //'locale' => 'ru',
+ *     //'format' => 'yyyy-MM-dd',
+ * ]);
+ * ```
+ *
+ * The following example will use the name property instead:
+ *
+ * ```php
+ * echo Datepicker::widget([
+ *     'name'  => 'from_date',
+ *     'value'  => $value,
+ *     //'locale' => 'ru',
+ *     //'format' => 'yyyy-MM-dd',
+ * ]);
+ * ```
+ *
+ * You can also use this widget in an [[\yii\widgets\ActiveForm|ActiveForm]] using the [[\yii\widgets\ActiveField::widget()|widget()]]
+ * method, for example like this:
+ *
+ * ```php
+ * <?= $form->field($model, 'from_date')->widget(\simialbi\yii2\date\Datepicker::classname(), [
+ *     //'locale' => 'ru',
+ *     //'format' => 'yyyy-MM-dd',
+ * ]) ?>
+ * ```
+ *
+ * @see http://eonasdan.github.io/bootstrap-datetimepicker/
+ * @author Simon Karlen <simi.albi@gmail.com>
+ */
 class Datepicker extends InputWidget {
 	/**
 	 * The markup to render the calendar icon in the date picker button.

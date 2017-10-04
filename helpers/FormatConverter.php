@@ -11,6 +11,16 @@ namespace simialbi\yii2\date\helpers;
 use IntlDateFormatter;
 use Yii;
 
+/**
+ * FormatConverter provides functionality to convert between different formatting pattern formats.
+ *
+ * It provides functions to convert date format patterns between different conventions.
+ *
+ * @author Carsten Brandt <mail@cebe.cc>
+ * @author Enrica Ruedin <e.ruedin@guggach.com>
+ * @author Simon Karlen <simi.albi@gmail.com>
+ * @since 2.0
+ */
 class FormatConverter extends \yii\helpers\FormatConverter {
 	protected static $_icuShortFormats = [
 		'short'  => 3, // IntlDateFormatter::SHORT,
@@ -18,6 +28,7 @@ class FormatConverter extends \yii\helpers\FormatConverter {
 		'long'   => 1, // IntlDateFormatter::LONG,
 		'full'   => 0, // IntlDateFormatter::FULL,
 	];
+
 	/**
 	 * @var array the moment fallback definition to use for the ICU short patterns `short`, `medium`, `long` and `full`.
 	 * This is used as fallback when the intl extension is not installed.
