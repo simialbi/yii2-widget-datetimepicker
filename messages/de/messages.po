@@ -112,3 +112,13 @@ msgstr "Sekunde wählen"
 msgctxt "simialbi/date/datepicker"
 msgid "Decrement Second"
 msgstr "-1 Sekunde"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Toggle Period"
+msgstr "Vormittag / Nachmittag"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Select Time"
+msgstr "Zeit wählen"

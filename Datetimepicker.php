@@ -161,7 +161,9 @@ class Datetimepicker extends InputWidget {
 			'decrementMinute' => Yii::t('simialbi/date/datepicker', 'Decrement Minute'),
 			'incrementSecond' => Yii::t('simialbi/date/datepicker', 'Increment Second'),
 			'pickSecond'      => Yii::t('simialbi/date/datepicker', 'Pick Second'),
-			'decrementSecond' => Yii::t('simialbi/date/datepicker', 'Decrement Second')
+			'decrementSecond' => Yii::t('simialbi/date/datepicker', 'Decrement Second'),
+			'togglePeriod'    => Yii::t('simialbi/date/datepicker', 'Toggle Period'),
+			'selectTime'      => Yii::t('simialbi/date/datepicker', 'Select Time')
 		];
 	}
 
