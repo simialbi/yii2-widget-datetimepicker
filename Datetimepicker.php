@@ -237,6 +237,7 @@ class Datetimepicker extends InputWidget {
 		DatetimepickerAsset::register($view);
 
 		$js = [
+			"jQuery('#$id').on('dp.show', function () { var dtp = jQuery(this); window.setTimeout(function () { dtp.trigger('dp.change'); }, 200); });",
 			"jQuery('#$id').datetimepicker({$this->getClientOptions()});"
 		];
 		if (!empty($this->link)) {
