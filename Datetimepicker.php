@@ -182,10 +182,11 @@ class Datetimepicker extends InputWidget {
 	 * @return string
 	 */
 	protected function renderInput() {
+		$options = $this->options;
+		$id      = ArrayHelper::remove($options, 'id');
 		$button  = Html::tag('span', static::CALENDAR_ICON, [
 			'class' => 'input-group-addon'
 		]);
-		$options = $this->options;
 		Html::addCssClass($options, 'form-control');
 
 		if ($this->hasModel()) {
@@ -198,14 +199,17 @@ class Datetimepicker extends InputWidget {
 				return $input;
 			case self::TYPE_COMPONENT_PREPEND:
 				return Html::tag('div', $button.$input, [
-					'class' => 'input-group'
+					'class' => 'input-group',
+					'id'    => $id
 				]);
 			case self::TYPE_COMPONENT_APPEND:
 			default:
 				return Html::tag('div', $input.$button, [
-					'class' => 'input-group'
+					'class' => 'input-group',
+					'id'    => $id
 				]);
 			case self::TYPE_INLINE:
+				$options['id'] = $id;
 				if ($this->hasModel()) {
 					$input = Html::activeHiddenInput($this->model, $this->attribute, $options);
 				} else {
