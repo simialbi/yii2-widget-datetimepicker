@@ -247,6 +247,9 @@ class Datetimepicker extends InputWidget {
 		if (!empty($this->link)) {
 			$js[] = <<<JS
 jQuery('#{$this->link}').on('dp.change', function (e) {
+	if (!e.date) {
+		return;
+	}
 	jQuery('#$id').data('DateTimePicker').{$this->linkType}Date(e.date);
 });
 JS;
