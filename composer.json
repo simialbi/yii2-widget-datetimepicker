@@ -19,12 +19,12 @@
 			"email": "simi.albi@gmail.com"
 		}
 	],
-	"minimum-stability": "dev",
-	"prefer-stable": true,
+	"minimum-stability": "stable",
 	"require": {
-		"yiisoft/yii2": ">=2.0.5",
-		"yiisoft/yii2-bootstrap": ">=2.0.5",
-		"bower-asset/eonasdan-bootstrap-datetimepicker": ">=4.17.47"
+		"yiisoft/yii2": "~2.0",
+		"yiisoft/yii2-bootstrap": "~2.0",
+		"simialbi/yii2-simialbi-base": "*",
+		"npm-asset/eonasdan-bootstrap-datetimepicker": ">=4.17.47"
 	},
 	"config": {
 		"process-timeout": 1800,

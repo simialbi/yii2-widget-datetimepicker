@@ -1,19 +1,17 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: karlen
- * Date: 04.10.2017
- * Time: 14:15
+ * @package yii2-widget-datetimepicker
+ * @author Simon Karlen <simi.albi@gmail.com>
  */
 
 namespace simialbi\yii2\date;
 
-use simialbi\yii2\date\helpers\FormatConverter;
+use simialbi\yii2\helpers\FormatConverter;
+use simialbi\yii2\widgets\InputWidget;
 use yii\bootstrap\Html;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\web\View;
-use yii\widgets\InputWidget;
 use Yii;
 
 /**
@@ -91,9 +89,10 @@ class Datetimepicker extends InputWidget {
 	public $type = self::TYPE_COMPONENT_APPEND;
 
 	/**
-	 * @var string date, time or datetime format. See momentjs' docs for valid formats. Format also
-	 * dictates what components are shown, e.g. MM/dd/YYYY will not display the time picker.
-	 * @see http://momentjs.com/docs/#/displaying/format/
+	 * @var string date, time or datetime ICU format. Alternatively this can be a string prefixed with `php:`
+	 * representing a format that can be recognized by the PHP date()-function.
+	 * Format also dictates what components are shown, e.g. MM/dd/yyyy will not display the time picker.
+	 * @see http://userguide.icu-project.org/formatparse/datetime#TOC-Date-Time-Format-Syntax
 	 */
 	public $format;
 
@@ -116,13 +115,6 @@ class Datetimepicker extends InputWidget {
 		'useStrict'       => true,
 		'showTodayButton' => true
 	];
-
-	/**
-	 * @var array client options
-	 * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
-	 * @see also http://eonasdan.github.io/bootstrap-datetimepicker/Options/
-	 */
-	public $clientOptions = [];
 
 	/**
 	 * @inheritdoc
@@ -172,8 +164,9 @@ class Datetimepicker extends InputWidget {
 	 */
 	public function run() {
 		parent::run();
-		echo $this->renderInput();
+		$html = $this->renderInput();
 		$this->registerPlugin();
+		return $html;
 	}
 
 	/**
@@ -221,20 +214,9 @@ class Datetimepicker extends InputWidget {
 	}
 
 	/**
-	 * Init translations
+	 * @inheritdoc
 	 */
-	protected function registerTranslations() {
-		Yii::$app->i18n->translations['simialbi/date*'] = [
-			'class'          => 'yii\i18n\GettextMessageSource',
-			'sourceLanguage' => 'en-US',
-			'basePath'       => __DIR__.'/messages'
-		];
-	}
-
-	/**
-	 * Registers the assets and builds the required js for the widget
-	 */
-	protected function registerPlugin() {
+	protected function registerPlugin($pluginName = 'datetimepicker') {
 		$id   = $this->options['id'];
 		$view = $this->getView();
 
@@ -242,7 +224,7 @@ class Datetimepicker extends InputWidget {
 
 		$js = [
 			"jQuery('#$id').on('dp.show', function () { var dtp = jQuery(this); window.setTimeout(function () { dtp.trigger('dp.change'); }, 200); });",
-			"jQuery('#$id').datetimepicker({$this->getClientOptions()});"
+			"jQuery('#$id').$pluginName({$this->getClientOptions()});"
 		];
 		if (!empty($this->link)) {
 			$js[] = <<<JS
@@ -256,6 +238,7 @@ JS;
 		}
 
 		$view->registerJs(implode("\n", $js), View::POS_READY);
+		$this->registerClientEvents();
 	}
 
 	/**
