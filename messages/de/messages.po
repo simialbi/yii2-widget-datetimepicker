@@ -85,7 +85,7 @@ msgstr "-{delta, plural, =1{# Stunde} other{# Stunden}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Increment of {delta} {delta, plural, =1{one minute} other{# minutes}}"
+msgid "Increment of {delta, plural, =1{one minute} other{# minutes}}"
 msgstr "+{delta, plural, =1{# Minute} other{# Minuten}}"
 
 #: Datepicker.php
@@ -95,12 +95,12 @@ msgstr "Minute wählen"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Decrement of {delta} {delta, plural, =1{one minute} other{# minutes}}"
+msgid "Decrement of {delta, plural, =1{one minute} other{# minutes}}"
 msgstr "-{delta, plural, =1{# Minute} other{# Minuten}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Increment of {delta} {delta, plural, =1{one second} other{# seconds}}"
+msgid "Increment of {delta, plural, =1{one second} other{# seconds}}"
 msgstr "+{delta, plural, =1{# Sekunde} other{# Sekunden}}"
 
 #: Datepicker.php
@@ -110,7 +110,7 @@ msgstr "Sekunde wählen"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Decrement of {delta} {delta, plural, =1{one second} other{# seconds}}"
+msgid "Decrement of {delta, plural, =1{one second} other{# seconds}}"
 msgstr "-{delta, plural, =1{# Sekunde} other{# Sekunden}}"
 
 #: Datepicker.php
