@@ -70,8 +70,8 @@ msgstr "Nächstes Jahrhundert"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Increment of {n} {n, plural, =1{hour} other{hours}}"
-msgstr "+{n} {n, plural, =1{Stunde} other{Stunden}}"
+msgid "Increment of {delta, plural, =1{one hour} other{# hours}}"
+msgstr "+{delta, plural, =1{# Stunde} other{# Stunden}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
@@ -80,13 +80,13 @@ msgstr "Stunde wählen"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Decrement of {n} {n, plural, =1{hour} other{hours}}"
-msgstr "-{n} {n, plural, =1{Stunde} other{Stunden}}"
+msgid "Decrement of {delta, plural, =1{one hour} other{# hours}}"
+msgstr "-{delta, plural, =1{# Stunde} other{# Stunden}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Increment of {n} {n, plural, =1{minute} other{minutes}}"
-msgstr "+{n} {n, plural, =1{Minute} other{Minuten}}"
+msgid "Increment of {delta} {delta, plural, =1{one minute} other{# minutes}}"
+msgstr "+{delta, plural, =1{# Minute} other{# Minuten}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
@@ -95,13 +95,13 @@ msgstr "Minute wählen"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Decrement of {n} {n, plural, =1{minute} other{minutes}}"
-msgstr "-{n} {n, plural, =1{Minute} other{Minuten}}"
+msgid "Decrement of {delta} {delta, plural, =1{one minute} other{# minutes}}"
+msgstr "-{delta, plural, =1{# Minute} other{# Minuten}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Increment of {n} {n, plural, =1{second} other{seconds}}"
-msgstr "+{n} {n, plural, =1{Sekunde} other{Sekunden}}"
+msgid "Increment of {delta} {delta, plural, =1{one second} other{# seconds}}"
+msgstr "+{delta, plural, =1{# Sekunde} other{# Sekunden}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
@@ -110,8 +110,8 @@ msgstr "Sekunde wählen"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Decrement of {n} {n, plural, =1{second} other{seconds}}"
-msgstr "-{n} {n, plural, =1{Sekunde} other{Sekunden}}"
+msgid "Decrement of {delta} {delta, plural, =1{one second} other{# seconds}}"
+msgstr "-{delta, plural, =1{# Sekunde} other{# Sekunden}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"

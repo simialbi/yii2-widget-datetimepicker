@@ -145,26 +145,26 @@ class Datetimepicker extends InputWidget {
 			'nextDecade'      => Yii::t('simialbi/date/datepicker', 'Next Decade'),
 			'prevCentury'     => Yii::t('simialbi/date/datepicker', 'Previous Century'),
 			'nextCentury'     => Yii::t('simialbi/date/datepicker', 'Next Century'),
-			'incrementHour'   => Yii::t('simialbi/date/datepicker', 'Increment of {n} {n, plural, =1{hour} other{hours}}', [
-				'n' => 1
+			'incrementHour'   => Yii::t('simialbi/date/datepicker', 'Increment of {delta, plural, =1{one hour} other{# hours}}', [
+				'delta' => 1
 			]),
 			'pickHour'        => Yii::t('simialbi/date/datepicker', 'Pick Hour'),
-			'decrementHour'   => Yii::t('simialbi/date/datepicker', 'Decrement of {n} {n, plural, =1{hour} other{hours}}', [
-				'n' => 1
+			'decrementHour'   => Yii::t('simialbi/date/datepicker', 'Decrement of {delta, plural, =1{one hour} other{# hours}}', [
+				'delta' => 1
 			]),
-			'incrementMinute' => Yii::t('simialbi/date/datepicker', 'Increment of {n} {n, plural, =1{minute} other{minutes}}', [
-				'n' => ArrayHelper::getValue($this->clientOptions, 'stepping', $this->_defaultClientOptions['stepping'])
+			'incrementMinute' => Yii::t('simialbi/date/datepicker', 'Increment of {delta, plural, =1{one minute} other{# minutes}}', [
+				'delta' => ArrayHelper::getValue($this->clientOptions, 'stepping', $this->_defaultClientOptions['stepping'])
 			]),
 			'pickMinute'      => Yii::t('simialbi/date/datepicker', 'Pick Minute'),
-			'decrementMinute' => Yii::t('simialbi/date/datepicker', 'Decrement of {n} {n, plural, =1{minute} other{minutes}}', [
-				'n' => ArrayHelper::getValue($this->clientOptions, 'stepping', $this->_defaultClientOptions['stepping'])
+			'decrementMinute' => Yii::t('simialbi/date/datepicker', 'Decrement of {delta, plural, =1{one minute} other{# minutes}}', [
+				'delta' => ArrayHelper::getValue($this->clientOptions, 'stepping', $this->_defaultClientOptions['stepping'])
 			]),
-			'incrementSecond' => Yii::t('simialbi/date/datepicker', 'Increment of {n} {n, plural, =1{second} other{seconds}}', [
-				'n' => 1
+			'incrementSecond' => Yii::t('simialbi/date/datepicker', 'Increment of {delta, plural, =1{one second} other{# seconds}}', [
+				'delta' => 1
 			]),
 			'pickSecond'      => Yii::t('simialbi/date/datepicker', 'Pick Second'),
-			'decrementSecond' => Yii::t('simialbi/date/datepicker', 'Decrement of {n} {n, plural, =1{second} other{seconds}}', [
-				'n' => 1
+			'decrementSecond' => Yii::t('simialbi/date/datepicker', 'Decrement of {delta, plural, =1{one second} other{# seconds}}', [
+				'delta' => 1
 			]),
 			'togglePeriod'    => Yii::t('simialbi/date/datepicker', 'Toggle Period'),
 			'selectTime'      => Yii::t('simialbi/date/datepicker', 'Select Time')
