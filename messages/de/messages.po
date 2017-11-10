@@ -70,8 +70,8 @@ msgstr "Nächstes Jahrhundert"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Increment Hour"
-msgstr "+1 Stunde"
+msgid "Increment {n} {n, plural, =1{hour} other{hours}}"
+msgstr "+{n} {n, plural, =1{Stunde} other{Stunden}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
@@ -80,13 +80,13 @@ msgstr "Stunde wählen"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Decrement Hour"
-msgstr "-1 Stunde"
+msgid "Decrement {n} {n, plural, =1{hour} other{hours}}"
+msgstr "-{n} {n, plural, =1{Stunde} other{Stunden}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Increment Minute"
-msgstr "+1 Minute"
+msgid "Increment {n} {n, plural, =1{minute} other{minutes}}"
+msgstr "+{n} {n, plural, =1{Minute} other{Minuten}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
@@ -95,13 +95,13 @@ msgstr "Minute wählen"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Decrement Minute"
-msgstr "-1 Minute"
+msgid "Decrement {n} {n, plural, =1{minute} other{minutes}}"
+msgstr "-{n} {n, plural, =1{Minute} other{Minuten}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Increment Second"
-msgstr "+1 Sekunde"
+msgid "Increment {n} {n, plural, =1{second} other{seconds}}"
+msgstr "+{n} {n, plural, =1{Sekunde} other{Sekunden}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
@@ -110,8 +110,8 @@ msgstr "Sekunde wählen"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"
-msgid "Decrement Second"
-msgstr "-1 Sekunde"
+msgid "Decrement {n} {n, plural, =1{second} other{seconds}}"
+msgstr "-{n} {n, plural, =1{Sekunde} other{Sekunden}}"
 
 #: Datepicker.php
 msgctxt "simialbi/date/datepicker"

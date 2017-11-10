@@ -145,15 +145,27 @@ class Datetimepicker extends InputWidget {
 			'nextDecade'      => Yii::t('simialbi/date/datepicker', 'Next Decade'),
 			'prevCentury'     => Yii::t('simialbi/date/datepicker', 'Previous Century'),
 			'nextCentury'     => Yii::t('simialbi/date/datepicker', 'Next Century'),
-			'incrementHour'   => Yii::t('simialbi/date/datepicker', 'Increment Hour'),
+			'incrementHour'   => Yii::t('simialbi/date/datepicker', 'Increment of {n} {n, plural, =1{hour} other{hours}}', [
+				'n' => 1
+			]),
 			'pickHour'        => Yii::t('simialbi/date/datepicker', 'Pick Hour'),
-			'decrementHour'   => Yii::t('simialbi/date/datepicker', 'Decrement Hour'),
-			'incrementMinute' => Yii::t('simialbi/date/datepicker', 'Increment Minute'),
+			'decrementHour'   => Yii::t('simialbi/date/datepicker', 'Decrement of {n} {n, plural, =1{hour} other{hours}}', [
+				'n' => 1
+			]),
+			'incrementMinute' => Yii::t('simialbi/date/datepicker', 'Increment of {n} {n, plural, =1{minute} other{minutes}}', [
+				'n' => ArrayHelper::getValue($this->clientOptions, 'stepping', $this->_defaultClientOptions['stepping'])
+			]),
 			'pickMinute'      => Yii::t('simialbi/date/datepicker', 'Pick Minute'),
-			'decrementMinute' => Yii::t('simialbi/date/datepicker', 'Decrement Minute'),
-			'incrementSecond' => Yii::t('simialbi/date/datepicker', 'Increment Second'),
+			'decrementMinute' => Yii::t('simialbi/date/datepicker', 'Decrement of {n} {n, plural, =1{minute} other{minutes}}', [
+				'n' => ArrayHelper::getValue($this->clientOptions, 'stepping', $this->_defaultClientOptions['stepping'])
+			]),
+			'incrementSecond' => Yii::t('simialbi/date/datepicker', 'Increment of {n} {n, plural, =1{second} other{seconds}}', [
+				'n' => 1
+			]),
 			'pickSecond'      => Yii::t('simialbi/date/datepicker', 'Pick Second'),
-			'decrementSecond' => Yii::t('simialbi/date/datepicker', 'Decrement Second'),
+			'decrementSecond' => Yii::t('simialbi/date/datepicker', 'Decrement of {n} {n, plural, =1{second} other{seconds}}', [
+				'n' => 1
+			]),
 			'togglePeriod'    => Yii::t('simialbi/date/datepicker', 'Toggle Period'),
 			'selectTime'      => Yii::t('simialbi/date/datepicker', 'Select Time')
 		];
@@ -166,6 +178,7 @@ class Datetimepicker extends InputWidget {
 		parent::run();
 		$html = $this->renderInput();
 		$this->registerPlugin();
+
 		return $html;
 	}
 
