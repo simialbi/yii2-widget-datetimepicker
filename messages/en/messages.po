@@ -1,0 +1,124 @@
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Go to today"
+msgstr "Go to today"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Clear selection"
+msgstr "Clear selection"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Close the picker"
+msgstr "Close the picker"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Select Month"
+msgstr "Select Month"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Previous Month"
+msgstr "Previous Month"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Next Month"
+msgstr "Next Month"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Select Year"
+msgstr "Select Year"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Previous Year"
+msgstr "Previous Year"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Next Year"
+msgstr "Next Year"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Select Decade"
+msgstr "Select Decade"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Previous Decade"
+msgstr "Previous Decade"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Next Decade"
+msgstr "Next Decade"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Previous Century"
+msgstr "Previous Century"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Next Century"
+msgstr "Next Century"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Increment of {n} {n, plural, =1{hour} other{hours}}"
+msgstr "Increment of {n} {n, plural, =1{hour} other{hours}}"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Pick Hour"
+msgstr "Pick Hour"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Decrement of {n} {n, plural, =1{hour} other{hours}}"
+msgstr "Decrement of {n} {n, plural, =1{hour} other{hours}}"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Increment of {n} {n, plural, =1{minute} other{minutes}}"
+msgstr "Increment of {n} {n, plural, =1{minute} other{minutes}}"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Pick Minute"
+msgstr "Pick Minute"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Decrement of {n} {n, plural, =1{minute} other{minutes}}"
+msgstr "Decrement of {n} {n, plural, =1{minute} other{minutes}}"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Increment of {n} {n, plural, =1{second} other{seconds}}"
+msgstr "Increment of {n} {n, plural, =1{second} other{seconds}}"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Pick Second"
+msgstr "Pick Second"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Decrement of {n} {n, plural, =1{second} other{seconds}}"
+msgstr "Decrement of {n} {n, plural, =1{second} other{seconds}}"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Toggle Period"
+msgstr "Toggle Period"
+
+#: Datepicker.php
+msgctxt "simialbi/date/datepicker"
+msgid "Select Time"
+msgstr "Select Time"
