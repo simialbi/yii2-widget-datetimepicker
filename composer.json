@@ -20,6 +20,12 @@
 		}
 	],
 	"minimum-stability": "stable",
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		}
+	],
 	"require": {
 		"yiisoft/yii2": "~2.0",
 		"yiisoft/yii2-bootstrap": "~2.0",
@@ -27,13 +33,7 @@
 		"npm-asset/eonasdan-bootstrap-datetimepicker": ">=4.17.47"
 	},
 	"config": {
-		"process-timeout": 1800,
-		"fxp-asset": {
-			"installer-paths": {
-				"npm-asset-library": "vendor/npm",
-				"bower-asset-library": "vendor/bower"
-			}
-		}
+		"process-timeout": 1800
 	},
 	"autoload": {
 		"psr-4": {
