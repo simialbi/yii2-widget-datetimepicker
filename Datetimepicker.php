@@ -108,6 +108,18 @@ class Datetimepicker extends InputWidget {
 	public $linkType = self::LINK_MIN;
 
 	/**
+	 * @var string the input group button icon. Defaults to [[CALENDAR_ICON]]. This value is ignored when type
+	 * equals [[TYPE_INPUT]] or [[TYPE_INLINE]]
+	 */
+	public $inputGroupAddonButtonIcon = self::CALENDAR_ICON;
+
+	/**
+	 * @var array Input group addon options. This value is ignored when type equals [[TYPE_INPUT]] or [[TYPE_INLINE]]
+	 * @see \yii\bootstrap\Html::renderTagAttributes() for details on how attributes are being rendered.
+	 */
+	public $inputGroupAddonOptions = [];
+
+	/**
 	 * @var array default client options
 	 */
 	private $_defaultClientOptions = [
@@ -188,11 +200,12 @@ class Datetimepicker extends InputWidget {
 	 * @return string
 	 */
 	protected function renderInput() {
-		$options = $this->options;
-		$id      = ArrayHelper::remove($options, 'id');
-		$button  = Html::tag('span', static::CALENDAR_ICON, [
-			'class' => 'input-group-addon'
-		]);
+		$options                = $this->options;
+		$id                     = ArrayHelper::remove($options, 'id');
+		$inputGroupAddonOptions = $this->inputGroupAddonOptions;
+		Html::addCssClass($inputGroupAddonOptions, 'input-group-addon');
+		$tag    = ArrayHelper::remove($inputGroupAddonOptions, 'tag', 'span');
+		$button = Html::tag($tag, $this->inputGroupAddonButtonIcon, $this->inputGroupAddonOptions);
 		Html::addCssClass($options, 'form-control');
 
 		if ($this->hasModel()) {
