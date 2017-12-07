@@ -205,7 +205,7 @@ class Datetimepicker extends InputWidget {
 		$inputGroupAddonOptions = $this->inputGroupAddonOptions;
 		Html::addCssClass($inputGroupAddonOptions, 'input-group-addon');
 		$tag    = ArrayHelper::remove($inputGroupAddonOptions, 'tag', 'span');
-		$button = Html::tag($tag, $this->inputGroupAddonButtonIcon, $this->inputGroupAddonOptions);
+		$button = Html::tag($tag, $this->inputGroupAddonButtonIcon, $inputGroupAddonOptions);
 		Html::addCssClass($options, 'form-control');
 
 		if ($this->hasModel()) {
