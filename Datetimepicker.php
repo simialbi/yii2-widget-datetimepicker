@@ -56,7 +56,7 @@ class Datetimepicker extends InputWidget {
 	/**
 	 * The markup to render the calendar icon in the date picker button.
 	 */
-	const CALENDAR_ICON = '<i class="glyphicon glyphicon-calendar"></i>';
+	const CALENDAR_ICON = '&#x1f4c5';
 	/**
 	 * Datepicker rendered as a plain input.
 	 */
@@ -108,10 +108,19 @@ class Datetimepicker extends InputWidget {
 	public $linkType = self::LINK_MIN;
 
 	/**
+	 * {@inheritdoc}
+	 */
+	public $options = [];
+
+	/**
 	 * @var array Input group addon options. This value is ignored when type equals [[TYPE_INPUT]] or [[TYPE_INLINE]]
 	 * @see \yii\bootstrap\Html::renderTagAttributes() for details on how attributes are being rendered.
 	 */
-	public $inputGroupAddonOptions = [];
+	public $inputGroupAddonOptions = [
+		'data' => [
+			'toggle' => 'datetimepicker'
+		]
+	];
 
 	/**
 	 * @var array The input group button options. This value is ignored when type equals
@@ -204,14 +213,20 @@ class Datetimepicker extends InputWidget {
 	 * @return string
 	 */
 	protected function renderInput() {
-		$options                = $this->options;
-		$id                     = ArrayHelper::remove($options, 'id');
-		$tag                    = ArrayHelper::remove($inputGroupAddonOptions, 'tag', 'div');
-		$inputGroupAddonOptions = $this->inputGroupAddonOptions;
-		$buttonOptions          = $this->buttonOptions;
-		$buttonIcon             = ArrayHelper::remove($buttonOptions, 'icon', self::CALENDAR_ICON);
+		$options                                  = $this->options;
+		$id                                       = ArrayHelper::remove($options, 'id');
+		$tag                                      = ArrayHelper::remove($inputGroupAddonOptions, 'tag', 'div');
+		$inputGroupAddonOptions                   = $this->inputGroupAddonOptions;
+		$inputGroupAddonOptions['data']['target'] = '#' . $id;
+		$options['data']['target']                = '#' . $id;
+		$buttonOptions                            = $this->buttonOptions;
+		$buttonIcon                               = ArrayHelper::remove($buttonOptions, 'icon', self::CALENDAR_ICON);
 		Html::addCssClass($options, 'form-control');
 
+		if ($this->type === self::TYPE_INPUT) {
+			$options['id']             = $id;
+			$options['data']['toggle'] = 'datetimepicker';
+		}
 		if ($this->hasModel()) {
 			$input = Html::activeTextInput($this->model, $this->attribute, $options);
 		} else {

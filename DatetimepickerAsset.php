@@ -48,8 +48,8 @@ class DatetimepickerAsset extends AssetBundle {
 	public $publishOptions = [
 		'forceCopy' => YII_DEBUG,
 		'only'      => [
-			'build/css/*',
-			'build/js/*'
+			'css/*',
+			'js/*'
 		]
 	];
 }
