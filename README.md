@@ -1,10 +1,10 @@
 # yii2-widget-datetimepicker
-This extension provides a `date`, `time` or `datetime` picker widget for yii2 framework in bootstrap style. It's based 
-on [Bootstrap Datetimepicker](http://eonasdan.github.io/bootstrap-datetimepicker/) from [Eonasdan](https://github.com/Eonasdan).
+This extension provides a `date`, `time` or `datetime` picker widget for yii2 framework in **Bootstrap 4** style. It's based 
+on [Tempus Dominus](https://tempusdominus.github.io/bootstrap-4/).
  
 ## Resources
  * [yii2](https://github.com/yiisoft/yii2) framework
- * [Bootstrap Datetimepicker](http://eonasdan.github.io/bootstrap-datetimepicker/)
+ * [Tempus Dominus](https://tempusdominus.github.io/bootstrap-4/)
  
 ## Installation
 
@@ -19,7 +19,7 @@ $ php composer.phar require --prefer-dist simialbi/yii2-widget-datetimepicker
 or add 
 
 ```
-"simialbi/yii2-widget-datetimepicker": "*"
+"simialbi/yii2-widget-datetimepicker": "~2.0"
 ```
 
 to the ```require``` section of your `composer.json`
@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="my-form">
 	<?php $form = ActiveForm::begin(['id' => 'my-form']); ?>
 		<?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
-		<?= $form->field($model, 'birthday')->widget(Datetimepicker::className(), [
+		<?= $form->field($model, 'birthday')->widget(Datetimepicker::class, [
 				'format' => 'mm/dd/yyyy',
 				'type'   => Datetimepicker::TYPE_COMPONENT_APPEND
 			]) ?>

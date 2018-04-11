@@ -17,20 +17,20 @@ class DatetimepickerAsset extends AssetBundle {
 	/**
 	 * @var string the directory that contains the source asset files for this asset bundle.
 	 */
-	public $sourcePath = '@npm/eonasdan-bootstrap-datetimepicker/build';
+	public $sourcePath = '@npm/tempusdominus-bootstrap-4/build';
 
 	/**
 	 * @var array list of CSS files that this bundle contains.
 	 */
 	public $css = [
-		'css/bootstrap-datetimepicker.min.css'
+		'css/tempusdominus-bootstrap-4.min.css'
 	];
 
 	/**
 	 * @var array list of JavaScript files that this bundle contains.
 	 */
 	public $js = [
-		'js/bootstrap-datetimepicker.min.js'
+		'js/tempusdominus-bootstrap-4.min.js'
 	];
 
 	/**
@@ -46,6 +46,10 @@ class DatetimepickerAsset extends AssetBundle {
 	 * is being published.
 	 */
 	public $publishOptions = [
-		'forceCopy' => YII_DEBUG
+		'forceCopy' => YII_DEBUG,
+		'only'      => [
+			'build/css/*',
+			'build/js/*'
+		]
 	];
 }

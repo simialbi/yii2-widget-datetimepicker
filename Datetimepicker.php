@@ -39,8 +39,8 @@ use Yii;
  * ]);
  * ```
  *
- * You can also use this widget in an [[\yii\widgets\ActiveForm|ActiveForm]] using the [[\yii\widgets\ActiveField::widget()|widget()]]
- * method, for example like this:
+ * You can also use this widget in an [[\yii\widgets\ActiveForm|ActiveForm]] using the
+ * [[\yii\widgets\ActiveField::widget()|widget()]] method, for example like this:
  *
  * ```php
  * <?= $form->field($model, 'from_date')->widget(\simialbi\yii2\date\Datepicker::classname(), [
@@ -108,16 +108,20 @@ class Datetimepicker extends InputWidget {
 	public $linkType = self::LINK_MIN;
 
 	/**
-	 * @var string the input group button icon. Defaults to [[CALENDAR_ICON]]. This value is ignored when type
-	 * equals [[TYPE_INPUT]] or [[TYPE_INLINE]]
-	 */
-	public $inputGroupAddonButtonIcon = self::CALENDAR_ICON;
-
-	/**
 	 * @var array Input group addon options. This value is ignored when type equals [[TYPE_INPUT]] or [[TYPE_INLINE]]
 	 * @see \yii\bootstrap\Html::renderTagAttributes() for details on how attributes are being rendered.
 	 */
 	public $inputGroupAddonOptions = [];
+
+	/**
+	 * @var array The input group button options. This value is ignored when type equals
+	 * [[TYPE_INPUT]] or [[TYPE_INLINE]]
+	 * @see \yii\bootstrap\Html::renderTagAttributes() for details on how attributes are being rendered.
+	 */
+	public $buttonOptions = [
+		'class' => ['btn', 'btn-outline-secondary'],
+		'type'  => 'button'
+	];
 
 	/**
 	 * @var array default client options
@@ -202,10 +206,10 @@ class Datetimepicker extends InputWidget {
 	protected function renderInput() {
 		$options                = $this->options;
 		$id                     = ArrayHelper::remove($options, 'id');
+		$tag                    = ArrayHelper::remove($inputGroupAddonOptions, 'tag', 'div');
 		$inputGroupAddonOptions = $this->inputGroupAddonOptions;
-		Html::addCssClass($inputGroupAddonOptions, 'input-group-addon');
-		$tag    = ArrayHelper::remove($inputGroupAddonOptions, 'tag', 'span');
-		$button = Html::tag($tag, $this->inputGroupAddonButtonIcon, $inputGroupAddonOptions);
+		$buttonOptions          = $this->buttonOptions;
+		$buttonIcon             = ArrayHelper::remove($buttonOptions, 'icon', self::CALENDAR_ICON);
 		Html::addCssClass($options, 'form-control');
 
 		if ($this->hasModel()) {
@@ -217,13 +221,17 @@ class Datetimepicker extends InputWidget {
 			case self::TYPE_INPUT:
 				return $input;
 			case self::TYPE_COMPONENT_PREPEND:
-				return Html::tag('div', $button.$input, [
+				Html::addCssClass($inputGroupAddonOptions, 'input-group-prepend');
+				$addon = Html::tag($tag, Html::button($buttonIcon, $buttonOptions), $inputGroupAddonOptions);
+				return Html::tag('div', $addon . $input, [
 					'class' => 'input-group',
 					'id'    => $id
 				]);
 			case self::TYPE_COMPONENT_APPEND:
 			default:
-				return Html::tag('div', $input.$button, [
+				Html::addCssClass($inputGroupAddonOptions, 'input-group-append');
+				$addon = Html::tag($tag, Html::button($buttonIcon, $buttonOptions), $inputGroupAddonOptions);
+				return Html::tag('div', $input . $addon, [
 					'class' => 'input-group',
 					'id'    => $id
 				]);
