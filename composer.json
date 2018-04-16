@@ -1,6 +1,6 @@
 {
 	"name": "simialbi/yii2-widget-datetimepicker",
-	"description": "yii2 widget of Eonasdans datetimepicker plugin",
+	"description": "yii2 widget based on tempus dominus",
 	"keywords": [
 		"yii2",
 		"yii2-widgets",
@@ -30,7 +30,7 @@
 		"yiisoft/yii2": "~2.0",
 		"yiisoft/yii2-bootstrap4": "~1.0@dev",
 		"simialbi/yii2-simialbi-base": "^0.2",
-		"npm-asset/tempusdominus-bootstrap-4": "~5.0@dev"
+		"bower-asset/tempusdominus-bootstrap-4": "~5.0@dev"
 	},
 	"config": {
 		"process-timeout": 1800
