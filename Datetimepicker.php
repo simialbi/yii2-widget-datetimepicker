@@ -8,7 +8,7 @@ namespace simialbi\yii2\date;
 
 use simialbi\yii2\helpers\FormatConverter;
 use simialbi\yii2\widgets\InputWidget;
-use yii\bootstrap\Html;
+use yii\bootstrap4\Html;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\web\View;
