@@ -38,7 +38,7 @@ class DatetimepickerAsset extends AssetBundle {
 	 */
 	public $depends = [
 		'simialbi\yii2\web\MomentAsset',
-		'yii\bootstrap\BootstrapPluginAsset'
+		'yii\bootstrap4\BootstrapPluginAsset'
 	];
 
 	/**
