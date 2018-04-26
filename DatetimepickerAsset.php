@@ -17,7 +17,7 @@ class DatetimepickerAsset extends AssetBundle {
 	/**
 	 * @var string the directory that contains the source asset files for this asset bundle.
 	 */
-	public $sourcePath = '@npm/tempusdominus-bootstrap-4/build';
+	public $sourcePath = '@bower/tempusdominus-bootstrap-4/build';
 
 	/**
 	 * @var array list of CSS files that this bundle contains.
