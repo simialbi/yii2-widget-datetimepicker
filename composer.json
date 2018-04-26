@@ -30,7 +30,7 @@
 		"yiisoft/yii2": "~2.0",
 		"yiisoft/yii2-bootstrap": "~2.0",
 		"simialbi/yii2-simialbi-base": "*",
-		"npm-asset/eonasdan-bootstrap-datetimepicker": ">=4.17.47"
+		"bower-asset/eonasdan-bootstrap-datetimepicker": ">=4.17.47"
 	},
 	"config": {
 		"process-timeout": 1800
