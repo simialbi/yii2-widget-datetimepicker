@@ -1,43 +1,46 @@
 {
-	"name": "simialbi/yii2-widget-datetimepicker",
-	"description": "yii2 widget of Eonasdans datetimepicker plugin",
-	"keywords": [
-		"yii2",
-		"yii2-widgets",
-		"datepicker",
-		"datetimepicker"
-	],
-	"type": "yii2-extension",
-	"license": "MIT",
-	"support": {
-		"issues": "https://github.com/simialbi/yii2-widget-datetimepicker/issues",
-		"source": "https://github.com/simialbi/yii2-widget-datetimepicker"
-	},
-	"authors": [
-		{
-			"name": "Simon Karlen",
-			"email": "simi.albi@gmail.com"
-		}
-	],
-	"minimum-stability": "stable",
-	"repositories": [
-		{
-			"type": "composer",
-			"url": "https://asset-packagist.org"
-		}
-	],
-	"require": {
-		"yiisoft/yii2": "~2.0",
-		"yiisoft/yii2-bootstrap": "~2.0",
-		"simialbi/yii2-simialbi-base": "*",
-		"bower-asset/eonasdan-bootstrap-datetimepicker": ">=4.17.47"
-	},
-	"config": {
-		"process-timeout": 1800
-	},
-	"autoload": {
-		"psr-4": {
-			"simialbi\\yii2\\date\\": ""
-		}
-	}
+  "name": "simialbi/yii2-widget-datetimepicker",
+  "description": "yii2 widget of Eonasdans datetimepicker plugin",
+  "keywords": [
+    "yii2",
+    "yii2-widgets",
+    "datepicker",
+    "datetimepicker"
+  ],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/simialbi/yii2-widget-datetimepicker/issues",
+    "source": "https://github.com/simialbi/yii2-widget-datetimepicker"
+  },
+  "authors": [
+    {
+      "name": "Simon Karlen",
+      "email": "simi.albi@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "~2.0",
+    "yiisoft/yii2-bootstrap": "~2.0",
+    "simialbi/yii2-simialbi-base": "*",
+    "bower-asset/eonasdan-bootstrap-datetimepicker": ">=4.17.47"
+  },
+  "require-dev": {
+    "yiisoft/yii2-coding-standards": "~2.0"
+  },
+  "config": {
+    "process-timeout": 1800
+  },
+  "autoload": {
+    "psr-4": {
+      "simialbi\\yii2\\date\\": ""
+    }
+  }
 }
