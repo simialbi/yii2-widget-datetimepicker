@@ -1,43 +1,46 @@
 {
-	"name": "simialbi/yii2-widget-datetimepicker",
-	"description": "yii2 widget based on tempus dominus",
-	"keywords": [
-		"yii2",
-		"yii2-widgets",
-		"datepicker",
-		"datetimepicker"
-	],
-	"type": "yii2-extension",
-	"license": "MIT",
-	"support": {
-		"issues": "https://github.com/simialbi/yii2-widget-datetimepicker/issues",
-		"source": "https://github.com/simialbi/yii2-widget-datetimepicker"
-	},
-	"authors": [
-		{
-			"name": "Simon Karlen",
-			"email": "simi.albi@gmail.com"
-		}
-	],
-	"minimum-stability": "stable",
-	"repositories": [
-		{
-			"type": "composer",
-			"url": "https://asset-packagist.org"
-		}
-	],
-	"require": {
-		"yiisoft/yii2": "~2.0",
-		"yiisoft/yii2-bootstrap4": "~1.0@dev",
-		"simialbi/yii2-simialbi-base": "^0.2",
-		"bower-asset/tempusdominus-bootstrap-4": "~5.0@dev"
-	},
-	"config": {
-		"process-timeout": 1800
-	},
-	"autoload": {
-		"psr-4": {
-			"simialbi\\yii2\\date\\": ""
-		}
-	}
+  "name": "simialbi/yii2-widget-datetimepicker",
+  "description": "yii2 widget based on tempus dominus",
+  "keywords": [
+    "yii2",
+    "yii2-widgets",
+    "datepicker",
+    "datetimepicker"
+  ],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/simialbi/yii2-widget-datetimepicker/issues",
+    "source": "https://github.com/simialbi/yii2-widget-datetimepicker"
+  },
+  "authors": [
+    {
+      "name": "Simon Karlen",
+      "email": "simi.albi@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "~2.0",
+    "yiisoft/yii2-bootstrap4": "~1.0@dev",
+    "simialbi/yii2-simialbi-base": "^0.2",
+    "bower-asset/tempusdominus-bootstrap-4": "~5.0@dev"
+  },
+  "require-dev": {
+    "yiisoft/yii2-coding-standards": "~2.0"
+  },
+  "config": {
+    "process-timeout": 1800
+  },
+  "autoload": {
+    "psr-4": {
+      "simialbi\\yii2\\date\\": ""
+    }
+  }
 }
