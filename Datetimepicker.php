@@ -8,11 +8,12 @@ namespace simialbi\yii2\date;
 
 use simialbi\yii2\helpers\FormatConverter;
 use simialbi\yii2\widgets\InputWidget;
-use Yii;
+use yii\base\InvalidArgumentException;
 use yii\bootstrap\Html;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\web\View;
+use Yii;
 
 /**
  * Datepicker renders a bootstrap styled `date`, `time` or `datetimepicker` widget.
@@ -140,10 +141,20 @@ class Datetimepicker extends InputWidget
             $this->format = Yii::$app->formatter->dateFormat;
         }
         if ($this->hasModel()) {
-            $this->model->{$this->attribute} = Yii::$app->formatter->asDatetime($this->model->{$this->attribute},
-                $this->format);
+            try {
+                $this->model->{$this->attribute} = Yii::$app->formatter->asDatetime(
+                    $this->model->{$this->attribute},
+                    $this->format
+                );
+            } catch (InvalidArgumentException $e) {
+                $this->model->{$this->attribute} = null;
+            }
         } else {
-            $this->value = Yii::$app->formatter->asDatetime($this->value, $this->format);
+            try {
+                $this->value = Yii::$app->formatter->asDatetime($this->value, $this->format);
+            } catch (InvalidArgumentException $e) {
+                $this->value = null;
+            }
         }
 
         $this->registerTranslations();
