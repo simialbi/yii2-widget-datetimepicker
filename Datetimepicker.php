@@ -116,7 +116,7 @@ class Datetimepicker extends InputWidget
 
     /**
      * @var array Input group addon options. This value is ignored when type equals [[TYPE_INPUT]] or [[TYPE_INLINE]]
-     * @see \yii\bootstrap\Html::renderTagAttributes() for details on how attributes are being rendered.
+     * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
      */
     public $inputGroupAddonOptions = [
         'data' => [
@@ -127,7 +127,7 @@ class Datetimepicker extends InputWidget
     /**
      * @var array The input group button options. This value is ignored when type equals
      * [[TYPE_INPUT]] or [[TYPE_INLINE]]
-     * @see \yii\bootstrap\Html::renderTagAttributes() for details on how attributes are being rendered.
+     * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
      */
     public $buttonOptions = [
         'class' => ['btn', 'btn-outline-secondary'],
@@ -144,7 +144,8 @@ class Datetimepicker extends InputWidget
     ];
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
+     * @throws \ReflectionException
      */
     public function init()
     {
@@ -162,10 +163,16 @@ class Datetimepicker extends InputWidget
             } catch (InvalidArgumentException $e) {
                 $this->model->{$this->attribute} = null;
             }
+            if (false === strtotime($this->model->{$this->attribute})) {
+                $this->model->{$this->attribute} = null;
+            }
         } else {
             try {
                 $this->value = Yii::$app->formatter->asDatetime($this->value, $this->format);
             } catch (InvalidArgumentException $e) {
+                $this->value = null;
+            }
+            if (false === strtotime($this->value)) {
                 $this->value = null;
             }
         }
@@ -224,7 +231,7 @@ class Datetimepicker extends InputWidget
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function run()
     {
@@ -292,7 +299,7 @@ class Datetimepicker extends InputWidget
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function registerPlugin($pluginName = 'datetimepicker')
     {
