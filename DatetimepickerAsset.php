@@ -1,7 +1,7 @@
 <?php
 /**
  * @package yii2-simialbi-base
- * @author Simon Karlen <simi.albi@gmail.com>
+ * @author Simon Karlen <simi.albi@outlook.com>
  */
 
 namespace simialbi\yii2\date;
@@ -11,7 +11,7 @@ use simialbi\yii2\web\AssetBundle;
 /**
  * Asset bundle for DatePicker Widget
  *
- * @author Simon Karlen <simi.albi@gmail.com>
+ * @author Simon Karlen <simi.albi@outlook.com>
  */
 class DatetimepickerAsset extends AssetBundle
 {

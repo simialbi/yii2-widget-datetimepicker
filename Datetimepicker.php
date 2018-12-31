@@ -1,7 +1,7 @@
 <?php
 /**
  * @package yii2-widget-datetimepicker
- * @author Simon Karlen <simi.albi@gmail.com>
+ * @author Simon Karlen <simi.albi@outlook.com>
  */
 
 namespace simialbi\yii2\date;
@@ -51,7 +51,7 @@ use yii\web\View;
  * ```
  *
  * @see http://eonasdan.github.io/bootstrap-datetimepicker/
- * @author Simon Karlen <simi.albi@gmail.com>
+ * @author Simon Karlen <simi.albi@outlook.com>
  */
 class Datetimepicker extends InputWidget
 {
