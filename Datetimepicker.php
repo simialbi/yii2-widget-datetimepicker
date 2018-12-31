@@ -1,7 +1,7 @@
 <?php
 /**
  * @package yii2-widget-datetimepicker
- * @author Simon Karlen <simi.albi@gmail.com>
+ * @author Simon Karlen <simi.albi@outlook.com>
  */
 
 namespace simialbi\yii2\date;
@@ -10,7 +10,7 @@ use simialbi\yii2\helpers\FormatConverter;
 use simialbi\yii2\widgets\InputWidget;
 use Yii;
 use yii\base\InvalidArgumentException;
-use yii\bootstrap\Html;
+use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\web\View;
@@ -51,7 +51,7 @@ use yii\web\View;
  * ```
  *
  * @see http://eonasdan.github.io/bootstrap-datetimepicker/
- * @author Simon Karlen <simi.albi@gmail.com>
+ * @author Simon Karlen <simi.albi@outlook.com>
  */
 class Datetimepicker extends InputWidget
 {
@@ -168,6 +168,7 @@ class Datetimepicker extends InputWidget
 
         $this->_defaultClientOptions['debug'] = YII_DEBUG;
         $this->_defaultClientOptions['locale'] = strtolower(Yii::$app->language);
+        $this->_defaultClientOptions['timeZone'] = Yii::$app->timeZone;
         $this->_defaultClientOptions['tooltips'] = [
             'today' => Yii::t('simialbi/date/datepicker', 'Go to today'),
             'clear' => Yii::t('simialbi/date/datepicker', 'Clear selection'),
@@ -183,35 +184,59 @@ class Datetimepicker extends InputWidget
             'nextDecade' => Yii::t('simialbi/date/datepicker', 'Next Decade'),
             'prevCentury' => Yii::t('simialbi/date/datepicker', 'Previous Century'),
             'nextCentury' => Yii::t('simialbi/date/datepicker', 'Next Century'),
-            'incrementHour' => Yii::t('simialbi/date/datepicker',
-                'Increment of {delta, plural, =1{one hour} other{# hours}}', [
+            'incrementHour' => Yii::t(
+                'simialbi/date/datepicker',
+                'Increment of {delta, plural, =1{one hour} other{# hours}}',
+                [
                     'delta' => 1
-                ]),
+                ]
+            ),
             'pickHour' => Yii::t('simialbi/date/datepicker', 'Pick Hour'),
-            'decrementHour' => Yii::t('simialbi/date/datepicker',
-                'Decrement of {delta, plural, =1{one hour} other{# hours}}', [
+            'decrementHour' => Yii::t(
+                'simialbi/date/datepicker',
+                'Decrement of {delta, plural, =1{one hour} other{# hours}}',
+                [
                     'delta' => 1
-                ]),
-            'incrementMinute' => Yii::t('simialbi/date/datepicker',
-                'Increment of {delta, plural, =1{one minute} other{# minutes}}', [
-                    'delta' => ArrayHelper::getValue($this->clientOptions, 'stepping',
-                        $this->_defaultClientOptions['stepping'])
-                ]),
+                ]
+            ),
+            'incrementMinute' => Yii::t(
+                'simialbi/date/datepicker',
+                'Increment of {delta, plural, =1{one minute} other{# minutes}}',
+                [
+                    'delta' => ArrayHelper::getValue(
+                        $this->clientOptions,
+                        'stepping',
+                        $this->_defaultClientOptions['stepping']
+                    )
+                ]
+            ),
             'pickMinute' => Yii::t('simialbi/date/datepicker', 'Pick Minute'),
-            'decrementMinute' => Yii::t('simialbi/date/datepicker',
-                'Decrement of {delta, plural, =1{one minute} other{# minutes}}', [
-                    'delta' => ArrayHelper::getValue($this->clientOptions, 'stepping',
-                        $this->_defaultClientOptions['stepping'])
-                ]),
-            'incrementSecond' => Yii::t('simialbi/date/datepicker',
-                'Increment of {delta, plural, =1{one second} other{# seconds}}', [
+            'decrementMinute' => Yii::t(
+                'simialbi/date/datepicker',
+                'Decrement of {delta, plural, =1{one minute} other{# minutes}}',
+                [
+                    'delta' => ArrayHelper::getValue(
+                        $this->clientOptions,
+                        'stepping',
+                        $this->_defaultClientOptions['stepping']
+                    )
+                ]
+            ),
+            'incrementSecond' => Yii::t(
+                'simialbi/date/datepicker',
+                'Increment of {delta, plural, =1{one second} other{# seconds}}',
+                [
                     'delta' => 1
-                ]),
+                ]
+            ),
             'pickSecond' => Yii::t('simialbi/date/datepicker', 'Pick Second'),
-            'decrementSecond' => Yii::t('simialbi/date/datepicker',
-                'Decrement of {delta, plural, =1{one second} other{# seconds}}', [
+            'decrementSecond' => Yii::t(
+                'simialbi/date/datepicker',
+                'Decrement of {delta, plural, =1{one second} other{# seconds}}',
+                [
                     'delta' => 1
-                ]),
+                ]
+            ),
             'togglePeriod' => Yii::t('simialbi/date/datepicker', 'Toggle Period'),
             'selectTime' => Yii::t('simialbi/date/datepicker', 'Select Time')
         ];
@@ -320,8 +345,9 @@ JS;
         }
 
         if (strncmp($this->format, 'php:', 4) === 0) {
-            $this->clientOptions['format'] = FormatConverter::convertDateIcuToMoment(FormatConverter::convertDatePhpToIcu(substr($this->format,
-                4)));
+            $this->clientOptions['format'] = FormatConverter::convertDateIcuToMoment(
+                FormatConverter::convertDatePhpToIcu(substr($this->format, 4))
+            );
         } else {
             $this->clientOptions['format'] = FormatConverter::convertDateIcuToMoment($this->format);
         }
