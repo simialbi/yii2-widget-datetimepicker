@@ -38,7 +38,7 @@ class DatetimepickerAsset extends AssetBundle
      * @var array list of bundle class names that this bundle depends on.
      */
     public $depends = [
-        'simialbi\yii2\web\MomentAsset',
+        'simialbi\yii2\web\MomentTimezoneAsset',
         'yii\bootstrap4\BootstrapPluginAsset'
     ];
 
