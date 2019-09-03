@@ -334,12 +334,12 @@ class Datetimepicker extends InputWidget
         DatetimepickerAsset::register($view);
 
         $js = [
-            "jQuery('#$id').on('dp.show', function () { var dtp = jQuery(this); window.setTimeout(function () { dtp.trigger('dp.change'); }, 200); });",
+            "jQuery('#$id').on('dp.show', function () { var dtp = jQuery(this); window.setTimeout(function () { dtp.trigger('change.datetimepicker'); }, 200); });",
             "jQuery('#$id').$pluginName({$this->getClientOptions()});"
         ];
         if (!empty($this->link)) {
             $js[] = <<<JS
-jQuery('#{$this->link}').on('dp.change', function (e) {
+jQuery('#{$this->link}').on('change.datetimepicker', function (e) {
 	if (!e.date) {
 		return;
 	}
