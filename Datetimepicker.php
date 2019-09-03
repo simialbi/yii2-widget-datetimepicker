@@ -343,7 +343,7 @@ jQuery('#{$this->link}').on('change.datetimepicker', function (e) {
 	if (!e.date) {
 		return;
 	}
-	jQuery('#$id').data('DateTimePicker').{$this->linkType}Date(e.date);
+	jQuery('#$id').$pluginName('{$this->linkType}Date', e.date);
 });
 JS;
         }
