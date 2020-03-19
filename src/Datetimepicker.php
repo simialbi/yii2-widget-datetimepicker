@@ -275,7 +275,7 @@ class Datetimepicker extends InputWidget
     protected function renderInput()
     {
         $options = $this->options;
-        $id = ArrayHelper::remove($options, 'id');
+        $id = ArrayHelper::getValue($options, 'id');
         $tag = ArrayHelper::remove($inputGroupAddonOptions, 'tag', 'div');
         $inputGroupAddonOptions = $this->inputGroupAddonOptions;
         $inputGroupAddonOptions['data']['target'] = '#' . $id;
@@ -301,7 +301,7 @@ class Datetimepicker extends InputWidget
                 $addon = Html::tag($tag, Html::button($buttonIcon, $buttonOptions), $inputGroupAddonOptions);
                 return Html::tag('div', $addon . $input, [
                     'class' => 'input-group',
-                    'id' => $id
+                    'id' => $id . '-group'
                 ]);
             case self::TYPE_COMPONENT_APPEND:
             default:
@@ -309,7 +309,7 @@ class Datetimepicker extends InputWidget
                 $addon = Html::tag($tag, Html::button($buttonIcon, $buttonOptions), $inputGroupAddonOptions);
                 return Html::tag('div', $input . $addon, [
                     'class' => 'input-group',
-                    'id' => $id
+                    'id' => $id . '-group'
                 ]);
             case self::TYPE_INLINE:
                 $options['id'] = $id;
@@ -330,6 +330,10 @@ class Datetimepicker extends InputWidget
     {
         $id = $this->options['id'];
         $view = $this->getView();
+
+        if ($this->type !== self::TYPE_INLINE) {
+            $id .= '-group';
+        }
 
         DatetimepickerAsset::register($view);
 

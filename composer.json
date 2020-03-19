@@ -5,7 +5,8 @@
     "yii2",
     "yii2-widgets",
     "datepicker",
-    "datetimepicker"
+    "datetimepicker",
+    "tempus dominus"
   ],
   "type": "yii2-extension",
   "license": "MIT",
@@ -41,7 +42,7 @@
   },
   "autoload": {
     "psr-4": {
-      "simialbi\\yii2\\date\\": ""
+      "simialbi\\yii2\\date\\": "src"
     }
   }
 }
