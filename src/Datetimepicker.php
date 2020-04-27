@@ -331,7 +331,7 @@ class Datetimepicker extends InputWidget
         $id = $this->options['id'];
         $view = $this->getView();
 
-        if ($this->type !== self::TYPE_INLINE) {
+        if ($this->type !== self::TYPE_INLINE && $this->type !== self::TYPE_INPUT) {
             $id .= '-group';
         }
 
