@@ -1,53 +1,53 @@
 {
-  "name": "simialbi/yii2-widget-datetimepicker",
-  "description": "yii2 widget based on tempus dominus",
-  "keywords": [
-    "yii2",
-    "yii2-widgets",
-    "datepicker",
-    "datetimepicker",
-    "tempus dominus"
-  ],
-  "type": "yii2-extension",
-  "license": "MIT",
-  "support": {
-    "issues": "https://github.com/simialbi/yii2-widget-datetimepicker/issues",
-    "source": "https://github.com/simialbi/yii2-widget-datetimepicker"
-  },
-  "authors": [
-    {
-      "name": "Simon Karlen",
-      "email": "simi.albi@outlook.com"
+    "name": "simialbi/yii2-widget-datetimepicker",
+    "description": "yii2 widget based on tempus dominus",
+    "keywords": [
+        "yii2",
+        "yii2-widgets",
+        "datepicker",
+        "datetimepicker",
+        "tempus dominus"
+    ],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/simialbi/yii2-widget-datetimepicker/issues",
+        "source": "https://github.com/simialbi/yii2-widget-datetimepicker"
+    },
+    "authors": [
+        {
+            "name": "Simon Karlen",
+            "email": "simi.albi@outlook.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "yiisoft/yii2": "^2.0.23",
+        "yiisoft/yii2-bootstrap4": "^2.0.0",
+        "simialbi/yii2-simialbi-base": ">=0.10.2 <1.0 | ^1.0.0",
+        "bower-asset/tempusdominus-bootstrap-4": "^5.1.0"
+    },
+    "require-dev": {
+        "yiisoft/yii2-coding-standards": "~2.0"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "autoload": {
+        "psr-4": {
+            "simialbi\\yii2\\date\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
     }
-  ],
-  "minimum-stability": "stable",
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
-  ],
-  "require": {
-    "php": ">=5.6",
-    "yiisoft/yii2": "^2.0.23",
-    "yiisoft/yii2-bootstrap4": "^2.0.0",
-    "simialbi/yii2-simialbi-base": ">=0.5 <1.0 | ^1.0.0",
-    "bower-asset/tempusdominus-bootstrap-4": "^5.1.0"
-  },
-  "require-dev": {
-    "yiisoft/yii2-coding-standards": "~2.0"
-  },
-  "config": {
-    "process-timeout": 1800
-  },
-  "autoload": {
-    "psr-4": {
-      "simialbi\\yii2\\date\\": "src"
-    }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "2.0.x-dev"
-    }
-  }
 }

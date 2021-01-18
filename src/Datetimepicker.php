@@ -144,7 +144,7 @@ class Datetimepicker extends InputWidget
     ];
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      * @throws \ReflectionException
      */
     public function init()
@@ -324,9 +324,9 @@ class Datetimepicker extends InputWidget
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
-    protected function registerPlugin($pluginName = 'datetimepicker')
+    protected function registerPlugin($pluginName = 'datetimepicker', $selector = null)
     {
         $id = $this->options['id'];
         $view = $this->getView();
@@ -335,11 +335,15 @@ class Datetimepicker extends InputWidget
             $id .= '-group';
         }
 
+        if (empty($selector)) {
+            $selector = '#' . $id;
+        }
+
         DatetimepickerAsset::register($view);
 
         $js = [
-            "jQuery('#$id').on('dp.show', function () { var dtp = jQuery(this); window.setTimeout(function () { dtp.trigger('change.datetimepicker'); }, 200); });",
-            "jQuery('#$id').$pluginName({$this->getClientOptions()});"
+            "jQuery('$selector').on('dp.show', function () { var dtp = jQuery(this); window.setTimeout(function () { dtp.trigger('change.datetimepicker'); }, 200); });",
+            "jQuery('$selector').$pluginName({$this->getClientOptions()});"
         ];
         if (!empty($this->link)) {
             $js[] = <<<JS
