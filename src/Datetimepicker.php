@@ -255,7 +255,8 @@ class Datetimepicker extends InputWidget
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     * @throws \Exception
      */
     public function run(): string
     {
@@ -270,6 +271,7 @@ class Datetimepicker extends InputWidget
      * Renders the source input for the DatePicker plugin.
      *
      * @return string
+     * @throws \Exception
      */
     protected function renderInput(): string
     {
