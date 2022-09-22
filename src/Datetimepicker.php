@@ -145,9 +145,8 @@ class Datetimepicker extends InputWidget
 
     /**
      * {@inheritDoc}
-     * @throws \ReflectionException
      */
-    public function init()
+    public function init(): void
     {
         parent::init();
 
@@ -258,7 +257,7 @@ class Datetimepicker extends InputWidget
     /**
      * {@inheritdoc}
      */
-    public function run()
+    public function run(): string
     {
         parent::run();
         $html = $this->renderInput();
@@ -272,7 +271,7 @@ class Datetimepicker extends InputWidget
      *
      * @return string
      */
-    protected function renderInput()
+    protected function renderInput(): string
     {
         $options = $this->options;
         $id = ArrayHelper::getValue($options, 'id');
@@ -326,7 +325,7 @@ class Datetimepicker extends InputWidget
     /**
      * {@inheritDoc}
      */
-    protected function registerPlugin($pluginName = 'datetimepicker', $selector = null)
+    protected function registerPlugin(?string $pluginName = 'datetimepicker', ?string $selector = null)
     {
         $id = $this->options['id'];
         $view = $this->getView();
@@ -365,7 +364,7 @@ JS;
      *
      * @return string
      */
-    protected function getClientOptions()
+    protected function getClientOptions(): string
     {
         if (!empty($this->link)) {
             $this->clientOptions['useCurrent'] = false;
